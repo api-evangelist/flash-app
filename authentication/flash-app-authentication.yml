@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/flash-app-expense-openapi-original.json
+docs: https://flashapp.readme.io/reference/login
+summary:
+  types:
+  - credential-login
+  api_key_in: []
+  oauth2_flows: []
+  declared_security_schemes: 0
+notes: >-
+  The published OpenAPI 3.1 definition for the Flash Expense API declares an
+  empty components.securitySchemes object and an empty global security
+  requirement, so there is no machine-readable auth scheme to derive. The
+  documented model is instead a credential login: POST /login is called with
+  id_empresa, email and senha for a dedicated "usuario integrador" (integration
+  user) plus a recaptcha field, and the resulting session credential is used for
+  subsequent integration calls such as POST /integration/user. Flash does not
+  publish an OAuth 2.0 or OpenID Connect surface, an API key scheme, or a scopes
+  reference, so scopes/ is intentionally absent for this provider.
+schemes:
+- name: integration-user-login
+  type: credential-login
+  operation: login
+  location: request body
+  parameters:
+  - name: id_empresa
+    description: Numeric company identifier the integration user belongs to
+  - name: email
+    description: Email of the integration user (usuario integrador)
+  - name: senha
+    description: Password of the integration user
+  - name: recaptcha
+    description: reCAPTCHA token accompanying the login request
+  sources:
+  - openapi/flash-app-expense-openapi-original.json
+gaps:
+- No securitySchemes declared in the OpenAPI definition.
+- Token format, lifetime, refresh and transport header for the credential
+  returned by POST /login are not documented publicly.
+- No OAuth 2.0 / OIDC surface and no scopes or permissions reference published.
