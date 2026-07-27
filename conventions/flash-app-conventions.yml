@@ -1,0 +1,54 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/flash-app-expense-openapi-original.json + https://flashapp.readme.io/
+authentication:
+  style: credential-login
+  summary: POST /login with id_empresa + email + senha (+ recaptcha) for a dedicated
+    integration user; see authentication/flash-app-authentication.yml
+  artifact: authentication/flash-app-authentication.yml
+idempotency:
+  supported: false
+  notes: No idempotency key header or request parameter is documented, and none
+    appears in the published OpenAPI definition. No Idempotency pointer is emitted
+    for this provider.
+pagination:
+  supported: false
+  notes: No list/collection operations are published.
+field_expansion:
+  supported: false
+metadata:
+  supported: false
+request_tracing:
+  supported: false
+  notes: No request-id or correlation-id header is documented.
+versioning:
+  scheme: none-documented
+  spec_version: '1.0'
+  notes: The OpenAPI info.version is 1.0; no URI, header or date-based versioning
+    convention is documented and the base path carries no version segment.
+error_envelope:
+  format: none
+  notes: 400 responses are application/json with an empty schema; see
+    errors/flash-app-problem-types.yml
+  artifact: errors/flash-app-problem-types.yml
+rate_limiting:
+  documented: false
+  notes: No rate limits, quotas or rate-limit response headers are documented.
+content_type:
+  request: application/json
+  response: application/json
+language:
+  notes: Documentation, field names and product terminology are mixed Portuguese
+    (id_empresa, senha, cadastro-de-usuarios) and English (financeSystemId,
+    refCostCenter, bankingData).
+environments:
+  qa: https://qa.expenseon.com/api
+  production_app: https://app.expenseon.com
+  notes: The published spec declares only the QA host; see
+    sandbox/flash-app-sandbox.yml
+cross_references:
+  authentication: authentication/flash-app-authentication.yml
+  errors: errors/flash-app-problem-types.yml
+  lifecycle: lifecycle/flash-app-lifecycle.yml
+  data_model: data-model/flash-app-data-model.yml
+  sandbox: sandbox/flash-app-sandbox.yml

@@ -1,0 +1,16 @@
+{
+  "provider": "flash-app",
+  "sources": [
+    "flash-app-integration-api-openapi.yml",
+    "flash-app-login-api-openapi.yml"
+  ],
+  "outputs": [
+    "flash-app-integration-api-openapi.yml",
+    "flash-app-login-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

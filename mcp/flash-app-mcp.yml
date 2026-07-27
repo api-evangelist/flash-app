@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/flash-app-expense-openapi-original.json
+search_notes: >-
+  No official or community MCP server for Flash was found on the Flash developer
+  site, the flash-tecnologia GitHub organisation, or npm. The tools below are a
+  candidate surface derived one-per-operation from Flash's published OpenAPI
+  definition; Flash has not published or endorsed an MCP server.
+server:
+  name: flash-app
+  transport: null
+  url: null
+tools:
+- name: login
+  description: Authenticate a Flash Expense integration user with id_empresa, email
+    and senha and obtain a session credential.
+  source_operation: openapi/flash-app-expense-openapi-original.json#login
+  method: POST
+  path: /login
+  consequence: write
+- name: cadastro_de_usuarios
+  description: Create or update an employee in Flash Expense, including profile,
+    subsidiary, area, job position, manager, cost centre and banking data.
+  source_operation: openapi/flash-app-expense-openapi-original.json#cadastro-de-usuários
+  method: POST
+  path: /integration/user
+  consequence: write

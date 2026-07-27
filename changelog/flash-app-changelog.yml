@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://flashapp.com.br/novidades-de-produto
+url: https://flashapp.com.br/novidades-de-produto
+scheme: undated-product-updates
+current_version: null
+notes: >-
+  Flash publishes a "Novidades de produto" product-updates page rather than a
+  dated developer changelog. Entries are feature announcements with author and
+  reading time but no publication date and no version number, and none of them
+  are API-scoped. There is no changelog on the ReadMe developer site, so API
+  consumers have no record of contract changes.
+api_changelog: false
+entries:
+- title: Roteirizacao inteligente de VT
+  summary: Automatic route and fare calculation for the transport (vale-transporte)
+    benefit.
+  date: null
+- title: Gestao de combustivel
+  summary: Controls for corporate fuel purchases.
+  date: null
+- title: Recrutamento e selecao
+  summary: Hiring workflow integrated from resume through employee management.
+  date: null
+- title: Navegacao do aplicativo
+  summary: Faster access paths in the mobile application.
+  date: null
+- title: Central de beneficios
+  summary: Consolidates all company benefits in one place.
+  date: null
+- title: Governanca de despesas
+  summary: Controls for expense oversight, autonomy and compliance.
+  date: null
+gaps:
+- No dates or version numbers on entries.
+- No API-level changelog or breaking-change log.

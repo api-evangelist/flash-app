@@ -1,0 +1,52 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Flash Expense API
+  version: 1.0.0
+extends: openapi/flash-app-expense-openapi-original.json
+x-generated: '2026-07-20'
+x-method: generated
+x-source: openapi/flash-app-expense-openapi-original.json
+actions:
+- target: $.info
+  update:
+    description: >-
+      Flash Expense integration API. Authenticate a dedicated integration user
+      (usuario integrador) with POST /login, then provision or update employees
+      with POST /integration/user. Published by Flash Tecnologia on its ReadMe
+      developer site.
+    contact:
+      name: Flash Tecnologia
+      url: https://flashapp.readme.io/
+    x-apievangelist-enriched: '2026-07-20'
+    x-apievangelist-slug: flash-app
+- target: $.servers
+  update:
+    x-apievangelist-note: >-
+      The published definition declares only the QA host. The production Flash
+      Expense application runs at app.expenseon.com; confirm the production API
+      base path with Flash before switching environments.
+- target: $.paths['/login'].post
+  update:
+    tags:
+    - Authentication
+    description: >-
+      Exchange integration-user credentials for a Flash Expense session
+      credential. The token format, lifetime and transport header are not
+      documented in the published definition.
+    x-apievangelist-action-class: acting
+    x-apievangelist-consequence: write
+- target: $.paths['/integration/user'].post
+  update:
+    tags:
+    - Users
+    summary: Create or update an employee in Flash Expense
+    description: >-
+      Provision an employee into Flash Expense with profile, subsidiary, area,
+      job position, manager, cost centre and banking data. Organisational
+      objects are referenced by external reference strings (refSubsidiary,
+      refJobPosition, refCostCenter, refManager).
+    x-apievangelist-action-class: acting
+    x-apievangelist-consequence: write
+    x-apievangelist-note: >-
+      This operation carries employee banking data; treat it as personal data
+      under Brazil's LGPD.

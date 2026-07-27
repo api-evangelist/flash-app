@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of the Flash website and API hosts
+notes: >-
+  No .well-known documents are published on any Flash host. flashapp.com.br
+  returns 404 for every probed path. api.flashapp.com.br is an AWS API Gateway
+  behind CloudFront that returns 403 ForbiddenException for every unauthenticated
+  request, including .well-known paths, so nothing is discoverable there.
+  Note also that *.flashapp.com.br resolves via a Vercel wildcard: unmapped
+  subdomains (developers., docs., status., trust., api-docs.) all 200 to a
+  careers catch-all site and must not be mistaken for real developer surfaces.
+hosts:
+- host: https://flashapp.com.br
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://api.flashapp.com.br
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403

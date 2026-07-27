@@ -1,0 +1,94 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/flash-app-expense-openapi-original.json
+notes: >-
+  The Flash Expense OpenAPI definition declares no components.schemas; every
+  request body is an inline anonymous object. The entities and relationships
+  below are derived from the inline property names of the two published
+  operations, which reference organisational objects (subsidiary, area, job
+  position, cost centre, manager) by opaque external reference strings.
+entities:
+- name: Company
+  source_fields:
+  - id_empresa
+  id_field: id_empresa
+  id_type: integer
+  operations:
+  - login
+- name: IntegrationUser
+  description: The credentialed integration account used to authenticate.
+  source_fields:
+  - email
+  - senha
+  operations:
+  - login
+- name: User
+  description: An employee provisioned into the Flash Expense product.
+  id_field: idUser
+  id_type: integer
+  source_fields:
+  - idUser
+  - financeSystemId
+  - name
+  - email
+  - profile
+  - documentId
+  - iaActive
+  operations:
+  - cadastro-de-usuários
+- name: Subsidiary
+  id_field: refSubsidiary
+  id_type: string
+  source_fields:
+  - subsidiary
+  - refSubsidiary
+- name: Area
+  source_fields:
+  - area
+- name: JobPosition
+  id_field: refJobPosition
+  id_type: string
+  source_fields:
+  - jobPosition
+  - refJobPosition
+- name: CostCenter
+  id_field: refCostCenter
+  id_type: string
+- name: BankingData
+  description: Nested object on User; its properties are not declared in the spec.
+  source_fields:
+  - bankingData
+relationships:
+- from: User
+  to: Subsidiary
+  kind: belongs_to
+  via: refSubsidiary
+- from: User
+  to: JobPosition
+  kind: belongs_to
+  via: refJobPosition
+- from: User
+  to: CostCenter
+  kind: belongs_to
+  via: refCostCenter
+- from: User
+  to: Area
+  kind: belongs_to
+  via: area
+- from: User
+  to: User
+  kind: belongs_to
+  via: refManager
+  description: Reporting line to the employee's manager.
+- from: User
+  to: BankingData
+  kind: has_one
+  via: bankingData
+- from: IntegrationUser
+  to: Company
+  kind: belongs_to
+  via: id_empresa
+gaps:
+- No components.schemas are declared; all objects are inline and anonymous.
+- No id prefix scheme or object reference page is published.
+- The bankingData object declares no properties.

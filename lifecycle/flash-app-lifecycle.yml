@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://flashapp.readme.io/ + https://flashapp.com.br/
+versioning:
+  scheme: none-documented
+  current: '1.0'
+  evidence: openapi info.version 1.0; no version segment in the base path and no
+    published versioning policy
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation policy, Sunset/Deprecation header support (RFC 8594) or
+    breaking-change notice period is published. No Deprecation pointer is emitted.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_notes: >-
+  No status page was found. status.flashapp.com.br resolves through the
+  *.flashapp.com.br Vercel wildcard to a careers catch-all site and returns 200
+  for any unmapped subdomain, so it is not a real status surface. No StatusPage
+  pointer is emitted.
+support:
+  help_center: https://faq.flashapp.com.br/kb/pt-BR
+  contact: https://flashapp.com.br/contato
+  ethics_channel: https://canaldeetica.com.br/flash/
+product_updates: https://flashapp.com.br/novidades-de-produto
+deprecated_operations: []
+deprecated_operations_notes: Neither published operation carries deprecated true.

@@ -1,0 +1,17 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/flash-app-expense-openapi-original.json
+notes: >-
+  Flash publishes no AGENTS.md or provider-authored agent skills. This skill is
+  generated from the two operations in Flash's published OpenAPI definition;
+  every operationId referenced exists verbatim in that spec.
+skills:
+- file: flash-app-provision-employee.md
+  name: Provision an employee into Flash Expense
+  description: Authenticate a Flash Expense integration user and create or update
+    an employee record, including subsidiary, job position, cost centre, manager
+    and banking data.
+  api: openapi/flash-app-expense-openapi-original.json
+  operations:
+  - login
+  - cadastro-de-usuários

@@ -1,20 +1,138 @@
 aid: flash-app
 name: Flash App
-description: Flash App is a company surfaced as a portfolio company of battery-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Flash (Flash Tecnologia) is a Sao Paulo based Brazilian HR and financial
+  management platform that centralizes three surfaces on one account: multi-benefits
+  (the Flash prepaid benefits card and PAT-compliant meal, food, mobility and wellness
+  balances), people management (admissions and offboarding, time and attendance, recruiting,
+  performance and engagement, extended by its FolhaCerta acquisition), and corporate
+  expense management (corporate cards, receipt capture and reimbursement, from its
+  2022 ExpenseON acquisition). Founded by Ricardo Salem, Pedro Lane and Guilherme
+  Lane, it launched in 2019 and reports more than 60,000 client companies, 1.5 million
+  users and over R$10 billion in processed transactions. Its public developer surface
+  is small: a ReadMe-hosted API reference covering the Flash Expense integration API
+  (login and user provisioning against the expenseon.com hosts), with the Flash Beneficios
+  reference still an unfilled template.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://flashapp.com.br/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/flash-app/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: public-api-reference-found
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Human Resources
+- Employee Benefits
+- Expense Management
+- Payments
+- Corporate Cards
+- Payroll
+- Fintech
+- Brazil
+- HR Tech
+apis:
+- aid: flash-app:flash-app-integration-api
+  name: Flash App Integration API
+  description: The Integration API from Flash App — 1 operation(s) for integration.
+  humanURL: https://flashapp.readme.io/reference/getting-started-with-your-api-1
+  baseURL: https://qa.expenseon.com/api
+  tags:
+  - Integration
+  properties:
+  - type: OpenAPI
+    url: openapi/flash-app-integration-api-openapi.yml
+  - type: Documentation
+    url: https://flashapp.readme.io/reference/getting-started-with-your-api-1
+- aid: flash-app:flash-app-login-api
+  name: Flash App Login API
+  description: The Login API from Flash App — 1 operation(s) for login.
+  humanURL: https://flashapp.readme.io/reference/getting-started-with-your-api-1
+  baseURL: https://qa.expenseon.com/api
+  tags:
+  - Login
+  properties:
+  - type: OpenAPI
+    url: openapi/flash-app-login-api-openapi.yml
+  - type: Documentation
+    url: https://flashapp.readme.io/reference/getting-started-with-your-api-1
+common:
+- type: DomainSecurity
+  url: security/flash-app-domain-security.yml
+- type: Website
+  url: https://flashapp.com.br/
+- type: DeveloperPortal
+  url: https://flashapp.readme.io/
+- type: Documentation
+  url: https://flashapp.readme.io/
+- type: APIReference
+  url: https://flashapp.readme.io/reference/getting-started-with-your-api-1
+- type: GettingStarted
+  url: https://flashapp.readme.io/reference/getting-started-with-your-api
+- type: Support
+  url: https://faq.flashapp.com.br/kb/pt-BR
+- type: HelpCenter
+  url: https://faq.flashapp.com.br/kb/pt-BR
+- type: Blog
+  url: https://flashapp.com.br/blog
+- type: GitHubOrganization
+  url: https://github.com/flash-tecnologia
+- type: Pricing
+  url: https://flashapp.com.br/planos
+- type: SignUp
+  url: https://flashapp.com.br/contato
+- type: Login
+  url: https://app.expenseon.com/admin/login
+- type: PrivacyPolicy
+  url: https://flashapp.com.br/lgpd
+- type: Compliance
+  url: https://flashapp.com.br/etica-compliance-pld
+- type: Security
+  url: https://flashapp.com.br/hubfs/Pol%C3%ADtica%20de%20Seguran%C3%A7a%20da%20Informa%C3%A7%C3%A3o%20e%20Cibern%C3%A9tica%20-%20V2.0%20(Uso%20P%C3%BAblico).pdf
+- type: LLMsTxt
+  url: llms/flash-app-llms.txt
+- type: WellKnown
+  url: well-known/flash-app-well-known.yml
+- type: Authentication
+  url: authentication/flash-app-authentication.yml
+- type: ErrorCatalog
+  url: errors/flash-app-problem-types.yml
+- type: Conformance
+  url: conformance/flash-app-conformance.yml
+- type: Conventions
+  url: conventions/flash-app-conventions.yml
+- type: DataModel
+  url: data-model/flash-app-data-model.yml
+- type: Lifecycle
+  url: lifecycle/flash-app-lifecycle.yml
+- type: ChangeLog
+  url: changelog/flash-app-changelog.yml
+- type: Sandbox
+  url: sandbox/flash-app-sandbox.yml
+- type: MCPServer
+  url: mcp/flash-app-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

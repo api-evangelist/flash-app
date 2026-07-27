@@ -1,0 +1,14 @@
+{
+  "repo": "flash-app",
+  "feeds": [
+    {
+      "source": "https://faq.flashapp.com.br/kb/pt-BR",
+      "feed_url": "https://faq.flashapp.com.br/kb/pt-BR",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

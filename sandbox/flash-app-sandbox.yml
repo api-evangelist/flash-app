@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/flash-app-expense-openapi-original.json + https://flashapp.readme.io/reference/login
+environments:
+- name: qa
+  base_url: https://qa.expenseon.com/api
+  role: The only server declared in Flash's published OpenAPI definition; the
+    documented integration target and the host the ReadMe API explorer calls.
+  published: true
+- name: production
+  base_url: https://app.expenseon.com
+  role: Live Flash Expense application (admin login at /admin/login). Not declared
+    in the published OpenAPI definition; recorded here as the production
+    counterpart to the QA host, not as a documented API base URL.
+  published: false
+test_credentials: []
+test_credentials_notes: >-
+  Flash publishes no sandbox credentials, magic test values, test cards, test
+  clocks or fixture/trigger tooling. Access to the QA environment requires an
+  integration user (usuario integrador) provisioned by Flash for the customer's
+  id_empresa, obtained through the account team rather than self-service signup.
+  Nothing was invented here.
+key_prefixes: []
+test_cards: []
+time_simulation: false
+console:
+  type: readme-api-explorer
+  url: https://flashapp.readme.io/reference/login
+  notes: The ReadMe reference has explorer-enabled true and proxy-enabled true
+    (x-readme block in the spec), so requests can be issued from the docs page
+    against the QA host given valid credentials.

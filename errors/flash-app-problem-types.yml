@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/flash-app-expense-openapi-original.json
+format: none
+format_notes: >-
+  The Flash Expense OpenAPI definition does not use RFC 9457
+  application/problem+json. Both documented operations declare a bare
+  application/json 400 response whose schema is an empty object and whose only
+  example is "{}", so no error envelope, error code registry or remediation
+  guidance can be derived. Flash publishes no error reference page on its
+  ReadMe developer site.
+problems:
+- status: 400
+  media_type: application/json
+  title: Bad Request
+  description: Declared 400 response; schema is an empty object and the published
+    example is "{}".
+  source_operation: openapi/flash-app-expense-openapi-original.json#login
+- status: 400
+  media_type: application/json
+  title: Bad Request
+  description: Declared 400 response; schema is an empty object and the published
+    example is "{}".
+  source_operation: openapi/flash-app-expense-openapi-original.json#cadastro-de-usuários
+gaps:
+- No 401/403/404/409/429/5xx responses are declared on any operation.
+- No error code registry, error envelope schema or remediation guidance is
+  published.

@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/flash-app-expense-openapi-original.json + Flash public compliance pages
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: openapi/flash-app-expense-openapi-original.json declares openapi 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securityScheme declared and no OAuth surface documented
+- id: oidc
+  conforms: false
+  evidence: no openIdConnect scheme; /.well-known/openid-configuration returns 404
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 400 responses use application/json with an empty schema, not application/problem+json
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on flashapp.com.br
+- id: json-api
+  conforms: false
+- id: asyncapi
+  conforms: false
+  evidence: no event, streaming or webhook surface published
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key header or parameter documented or present in the spec
+- id: pagination
+  conforms: false
+  evidence: no collection/list operations published
+compliance_programs:
+- id: lgpd
+  published: true
+  evidence: https://flashapp.com.br/lgpd
+- id: pld-ft
+  name: Politica de PLD-FT (anti-money-laundering / counter-terrorism financing)
+  published: true
+  evidence: https://flashapp.com.br/etica-compliance-pld
+- id: information-security-policy
+  name: Politica de Seguranca da Informacao e Ciberneetica V2.0 (public use)
+  published: true
+  evidence: https://flashapp.com.br/etica-compliance-pld
+- id: code-of-conduct
+  published: true
+  evidence: https://flashapp.com.br/etica-compliance-pld
+- id: anti-corruption
+  published: true
+  evidence: https://flashapp.com.br/etica-compliance-pld
+- id: pat
+  name: Programa de Alimentacao do Trabalhador (Brazilian worker meal programme)
+  published: true
+  evidence: https://flashapp.com.br/pat
+certifications: []
+certification_notes: >-
+  No SOC 2, ISO 27001, PCI DSS, HIPAA or FedRAMP certification is named on any
+  public Flash page, and no trust center was found (trust.flashapp.com.br is a
+  Vercel wildcard catch-all, not a real trust site).
