@@ -72,6 +72,8 @@ apis:
   - type: Documentation
     url: https://flashapp.readme.io/reference/getting-started-with-your-api-1
 common:
+- type: Overlay
+  url: overlays/flash-app-expense-overlay.yaml
 - type: DomainSecurity
   url: security/flash-app-domain-security.yml
 - type: Website
