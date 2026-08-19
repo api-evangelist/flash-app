@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Flash Expense Integration API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Integration",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Cadastro de Usuários",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qa.expenseon.com/api/integration/user",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Cadastro de Usuários"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
