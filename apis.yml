@@ -12,6 +12,18 @@ description: 'Flash (Flash Tecnologia) is a Sao Paulo based Brazilian HR and fin
   is small: a ReadMe-hosted API reference covering the Flash Expense integration API
   (login and user provisioning against the expenseon.com hosts), with the Flash Beneficios
   reference still an unfilled template.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
