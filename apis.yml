@@ -57,6 +57,16 @@ tags:
 - Payroll
 - Fintech
 - Brazil
+tags_raw:
+- Company
+- Human Resources
+- Employee Benefits
+- Expense Management
+- Payments
+- Corporate Cards
+- Payroll
+- Fintech
+- Brazil
 - HR Tech
 apis:
 - aid: flash-app:flash-app-integration-api
