@@ -1,8 +1,7 @@
 {
   "provider": "flash-app",
   "sources": [
-    "flash-app-integration-api-openapi.yml",
-    "flash-app-login-api-openapi.yml"
+    "_original/flash-app-expense-openapi-original.json"
   ],
   "outputs": [
     "flash-app-integration-api-openapi.yml",
@@ -11,6 +10,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "flash-app-expense-openapi-original.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "flash-app-expense-openapi-original.json: tagged paths POST /login -> Login",
+    "flash-app-expense-openapi-original.json: tagged paths POST /integration/user -> Integration",
+    "flash-app-expense-openapi-original.json: declared missing tag: Integration",
+    "flash-app-expense-openapi-original.json: declared missing tag: Login",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "flash-app-integration-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "flash-app-login-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
